@@ -1,0 +1,119 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar*/
+nav {    
+    width: 20%;
+    background: #f1f1f1;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    transition: left 0.3s;
+    margin: 0;
+    height: 100vh;
+    padding-top: 2rem;
+    top: 0;
+}
+
+nav h2 {
+    margin-left: 1rem;
+}
+
+nav h2,
+nav li {
+    text-transform: capitalize;
+}
+
+nav ul {
+    margin-top: 0;
+}
+
+#checkbox-navbar {
+    position: absolute;
+    display: none;
+}
+#checkbox-navbar-lbl {
+    position: absolute;
+    display: block;
+    z-index: 7;
+    transition: 0.3s;
+
+    top: 1rem;
+    left: 1rem;
+    width: 32px;
+    height: 21px;
+}
+.navbar-line {
+    width: 32px;
+    border-radius: 100px;
+    height: 5px;
+    background-color: #292828;
+    display: block;
+
+    margin-bottom: 2px;
+}
+input#checkbox-navbar:checked ~ nav {
+    left: -20%;
+}
+
+input#checkbox-navbar:checked ~ main {
+    width: 70%;
+}
+
+input#checkbox-navbar:checked + #checkbox-navbar-lbl {
+    transform: rotateZ(90deg);
+}
+
+
+/* Main */
+main {
+    width: 50%;
+    height: 100vh;
+    display: block;
+
+    font-weight: 400;
+
+    margin-left: auto;
+    margin-right: auto;
+    color: #292828;
+    transition: 0.3s;
+}
+h1 {
+    color: #38382b;
+    font-size: 42px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #38382b;
+    margin-top: 2rem;
+}
+
+    
+p {
+    font-family: "Roboto-Regular";
+}
+
+span.math {
+	font-size: 13px;
+}
+
+code {
+    /* overwrite hightlighting */
+    background: rgb(236, 236, 236) im !important;
+    padding: 1rem !important;
+    display: block;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2px;
+}
+
+a {
+    color: rgb(133, 133, 133);
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: black;
+}
